@@ -1,12 +1,8 @@
 //Compute functions can be used to create functions in run-time, when you do not want
 //to hard code the function name but take it from database
 
-
-
 //Example 1
-
 var method = 'Yogesh';
-
 class Compute {
 	['compute' + 'function']() {
 		console.log('You just called compute method');

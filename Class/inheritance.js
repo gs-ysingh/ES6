@@ -4,7 +4,7 @@ class Person {
 	}
 
 	toString() {
-		console.log('My name is ' + this.name);	
+		return this.name;
 	}
 };
 
@@ -15,8 +15,7 @@ class Man extends Person {
 	}
 
 	toString(name, age) {
-		super.toString();
-		console.log('My age is ' + this.age);
+		return 'Name: ' + this.name + ', Age: ' + this.age;
 	}
 };
 
@@ -27,10 +26,12 @@ class Child extends Man {
 	}
 
 	toString() {
-		super.toString();
-		console.log('Total children ' + this.numOfChildren);
+		return 'Name: ' + this.name + ', Age: ' + this.age + ', Number of children: ' + this.numOfChildren;
 	}
 };
 
-var child = new Child('Yogesh', 27, 0);
-child.toString();
+export {
+	Person,
+	Man,
+	Child
+}
